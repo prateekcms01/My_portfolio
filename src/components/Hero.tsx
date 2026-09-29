@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, ChevronDown, Briefcase } from "lucide-react";
+import { Mail, ChevronDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./BrandIcons";
 import { personal } from "../data/resume";
 
@@ -38,17 +38,6 @@ export default function Hero() {
       <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-blue-600/8 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-        {/* Status badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-medium"
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          {personal.openTo}
-        </motion.div>
-
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -155,7 +144,6 @@ export default function Hero() {
           transition={{ delay: 1, duration: 0.5 }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-zinc-600"
         >
-          <Briefcase size={14} className="opacity-0" />
           <motion.div
             animate={{ y: [0, 6, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}

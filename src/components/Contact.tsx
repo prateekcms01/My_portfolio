@@ -91,10 +91,9 @@ export default function Contact() {
   };
 
   const inputClass = (field: keyof FormState) =>
-    `w-full px-4 py-3 rounded-xl text-sm text-white placeholder-zinc-600 bg-white/[0.04] border transition-all duration-200 focus:outline-none focus:ring-2 ${
-      errors[field]
-        ? "border-red-500/50 focus:ring-red-500/30"
-        : "border-white/10 focus:ring-violet-500/30 focus:border-violet-500/40"
+    `w-full px-4 py-3 rounded-xl text-sm text-white placeholder-zinc-600 bg-white/[0.04] border transition-all duration-200 focus:outline-none focus:ring-2 ${errors[field]
+      ? "border-red-500/50 focus:ring-red-500/30"
+      : "border-white/10 focus:ring-violet-500/30 focus:border-violet-500/40"
     }`;
 
   return (
@@ -162,9 +161,7 @@ export default function Contact() {
                 Download Resume
               </a>
             </div>
-            <p className="text-xs text-zinc-600 font-mono">
-              * Place your resume PDF as /public/resume.pdf to enable download.
-            </p>
+
           </motion.div>
 
           {/* Right: contact form */}
@@ -184,9 +181,7 @@ export default function Contact() {
                   <div className="text-zinc-400 text-sm mt-1">
                     Thank you for reaching out. I'll get back to you soon.
                   </div>
-                  <p className="text-xs text-zinc-600 mt-3 font-mono">
-                    Note: Form submission requires a backend/email service connection.
-                  </p>
+
                 </div>
               </div>
             ) : (
@@ -267,9 +262,7 @@ export default function Contact() {
                   )}
                 </div>
 
-                <p className="text-xs text-zinc-600 font-mono">
-                  Note: Form currently has frontend validation only. Connect an email service/API to enable sending.
-                </p>
+
 
                 <button
                   type="submit"
